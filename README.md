@@ -4,7 +4,7 @@
 <h2><a href="https://discordapp.com/oauth2/authorize?client_id=610153116788326422&scope=bot&permissions=0">Server Invitation Link</a><h2>
 
 <h3>To run a command in Bot Test server, use c! command or @CheeberBot#5463 command. <br><br> For example, c! prefix or @CheeberBot#5463 prefix. <br><br>
-To run a command in this DM, simply use command with no prefix. <br><br><br>
+To run a command in this DM, simply use command with no prefix. <br><br>
 
 Use 'help command' to view detailed information about a specific command. <br><br>
 Use help all to view a list of all commands, not just available ones. <br>
