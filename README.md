@@ -7,7 +7,7 @@
 To run a command in this DM, simply use command with no prefix. <br><br>
 
 Use 'help command' to view detailed information about a specific command. <br><br>
-Use help all to view a list of all commands, not just available ones. <br>
+Use help all to view a list of all commands, not just available ones. <br><br>
 </h3>
 <h2>Available commands:</h2>
 
