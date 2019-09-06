@@ -8,7 +8,7 @@ module.exports = class Weather extends Command {
 			aliases: ['forecast'],
 			group: 'weather',
 			memberName: 'weather',
-            description: 'Provides weather.',
+            description: 'Provides weather with a description.',
             guildOnly: false,
             args: [
                 {
