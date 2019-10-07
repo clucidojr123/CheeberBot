@@ -13,7 +13,7 @@ Use help all to view a list of all commands, not just available ones. <br><br>
 
 <h3>Weather</h3>
 <ul>
-<li><strong>weather:</strong> Provides weather with a description.</li> 
+<li><strong>weather:</strong> Provides the weather of a city, displaying the current temperature (in fahrenheit & celsius) and conditions.</li> 
 </ul>
 
 <h3>Fun</h3>
