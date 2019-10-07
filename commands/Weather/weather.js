@@ -28,10 +28,11 @@ module.exports = class Weather extends Command {
                 let weather = JSON.parse(body);
                 let describe = weather.weather[0].description;
                 let roundTemp = Math.round(weather.main.temp);
-                let answer = `It is currently ${roundTemp}\xB0F in ${weather.name} with ${describe}.`;
+                let roundTempCel = Math.round((roundTemp - 32) * (5.0 / 9.0)); 
+                let answer = `It is currently ${roundTemp}\xB0F (${roundTempCel}\xB0C) in ${weather.name} with ${describe}.`;
                 message.reply(answer);
             } catch (error) {
-            message.say('Failed to retrieve weather information.');
+            message.reply(`Failed to retrieve weather information at: ${city}.`);
           } 
         });
       
