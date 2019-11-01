@@ -6,8 +6,8 @@ const client = new CommandoClient({
 	owner: '610153116788326422'
 	
 });
-
-
+const DBL = require("dblapi.js");
+const dbl = new DBL(process.env.DISCORDBOTKEY, client);
 client.registry
 	.registerDefaultTypes()
 	.registerGroups([
@@ -22,7 +22,10 @@ client.registry
 
 client.once('ready', () => {
         console.log(`Logged in as ${client.user.tag}! (${client.user.id})`);
-        client.user.setActivity('Garfield Kart');
+		client.user.setActivity('Garfield Kart');
+		setInterval(() => {
+			dbl.postStats(client.guilds.size, client.shards.Id, client.shards.total);
+		}, 1800000);
     });
     
 client.on('error', console.error);
