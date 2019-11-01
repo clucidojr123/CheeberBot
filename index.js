@@ -4,8 +4,9 @@ require('dotenv').config();
 const DBL = require("dblapi.js");
 const client = new CommandoClient({
 	commandPrefix: 'c!',
-	owner: '610153116788326422'
-	
+	owner: '610153116788326422',
+	disableEveryone: true,
+    unknownCommandResponse: false
 });
 const dblClient = new DBL(process.env.DISCORDBOTKEY, client);
 client.registry
