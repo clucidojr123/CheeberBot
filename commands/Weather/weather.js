@@ -1,5 +1,6 @@
 const { Command } = require('discord.js-commando');
 const request = require('request');
+const fetch = require('node-fetch');
 require('dotenv').config();
 module.exports = class Weather extends Command {
 	constructor(client) {
@@ -23,20 +24,15 @@ module.exports = class Weather extends Command {
     async run(message, { city }) {
         const location = city
         const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${process.env.WEATHERKEY}`;
-        await request(url, function (err, response, body) {
-            try { 
-                let weather = JSON.parse(body);
+        fetch(url)
+            .then(res => res.json())
+            .then(weather => {
                 let describe = weather.weather[0].description;
                 let roundTemp = Math.round(weather.main.temp);
                 let roundTempCel = Math.round((roundTemp - 32) * (5.0 / 9.0)); 
                 let answer = `It is currently ${roundTemp}\xB0F (${roundTempCel}\xB0C) in ${weather.name} with ${describe}.`;
                 message.reply(answer);
-            } catch (error) {
-            message.reply(`Failed to retrieve weather information at: ${city}.`);
-          } 
-        });
-      
-    
-    }
-    
+            })
+            .catch(err => {message.reply(`Failed to retrieve weather information at: ${city}.`);})
+    };
 };
