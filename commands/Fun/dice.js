@@ -14,14 +14,19 @@ module.exports = class Dice extends Command {
                     key: 'sides',
                     prompt: 'Please enter a number.',
                     type: 'integer',
+                    default: 6
                 },
             ],
 		});
     }
     
     async run(message, { sides }) {
-        const answer = (Math.floor((Math.random() * sides))) + 1;
-        message.reply(answer);
+        if(sides <= 0) {
+            message.reply('Invalid dice number. Please try again.');
+        } else {
+            const answer = (Math.floor((Math.random() * sides))) + 1;
+            message.reply(answer);
+        }
     }
     
 };
