@@ -14,7 +14,7 @@ module.exports = class Dice extends Command {
                     key: 'sides',
                     prompt: 'Please enter a number.',
                     type: 'integer',
-                    default: 6
+                    default: 5
                 },
             ],
 		});
