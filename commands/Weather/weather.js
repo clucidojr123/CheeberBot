@@ -1,7 +1,7 @@
 const { Command } = require('discord.js-commando');
-const request = require('request');
 const fetch = require('node-fetch');
 require('dotenv').config();
+
 module.exports = class Weather extends Command {
 	constructor(client) {
 		super(client, {

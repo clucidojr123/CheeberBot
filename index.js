@@ -12,6 +12,7 @@ const dblClient = new DBL(process.env.DISCORDBOTKEY, client);
 client.registry
 	.registerDefaultTypes()
 	.registerGroups([
+		['animalcrossing', 'Animal Crossing'],
 		['weather', 'Weather'],
         ['fun', 'Fun'],
         ['moderation', 'Moderation'],
