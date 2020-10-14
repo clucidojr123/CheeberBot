@@ -16,7 +16,7 @@ client.registry
 		['weather', 'Weather'],
         ['fun', 'Fun'],
         ['moderation', 'Moderation'],
-		['utilities', 'Utlities'],
+		['tools', 'Tools'],
 	])
 	.registerDefaultGroups()
 	.registerDefaultCommands()
