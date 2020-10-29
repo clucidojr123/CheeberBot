@@ -17,12 +17,13 @@ client.registry
         ['fun', 'Fun'],
         ['moderation', 'Moderation'],
 		['tools', 'Tools'],
+		['utilities', 'Utilities']
 	])
 	.registerDefaultGroups()
 	.registerDefaultCommands()
 	.registerCommandsIn(path.join(__dirname, 'commands'));
 
-client.once('ready', () => {
+client.on('ready', () => {
         console.log(`Logged in as ${client.user.tag}! (${client.user.id})`);
 		client.user.setActivity('Garfield Kart');
 		setInterval(() => {
