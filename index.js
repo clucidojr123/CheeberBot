@@ -9,7 +9,6 @@ const client = new CommandoClient({
     unknownCommandResponse: false
 });
 
-let x = 3
 const dblClient = new DBL(process.env.DISCORDBOTKEY, client);
 client.registry
 	.registerDefaultTypes()
